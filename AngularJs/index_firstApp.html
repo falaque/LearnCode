@@ -24,9 +24,8 @@
     <div ng-repeat='product in store.products' class = ''>
 	<div class = 'panel panel-success'>
 	<div class = 'panel-body' >
-      <h3 ng-include src="'firstApp/product_name.html'">
-	   
-	  </h3>
+      
+	  <h3 product-name></h3>
 	  <section ng-controller='PanelController as panel1'>
 	   <ul class = 'nav nav-pills'>
 	      <li ng-class='{active:panel1.isSelected(1)}'> <a href ng-click='panel1.selectTab(1)'>Description</a> </li>

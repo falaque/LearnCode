@@ -48,4 +48,11 @@
 			this.review={};
 		};
 	});
+	
+	app.directive('productName', function(){
+		return {
+			restrict:'A',
+			templateUrl:'firstApp/product_name.html'
+		};
+	});
 })();
