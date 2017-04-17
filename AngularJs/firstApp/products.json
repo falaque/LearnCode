@@ -1,0 +1,25 @@
+[
+	 {
+	 "name": "Dodecahedron1",
+	 "price": 2,
+	 "description": "Really cool gem.",
+	 "canPurchase": true,
+	 "reviews": [
+		 {
+			 "stars": 5,
+			 "body": "I love this product!",
+			 "author": "joe@thomas.com"
+		 },
+		 {
+			 "stars": 1,
+			 "body": "This product sucks",
+			 "author": "tim@hater.com"
+	     }
+	  ]
+	 },{
+	 "name": "Pentagonal Gem",
+	 "price": 5.95,
+	 "description": "Really cool gem.",
+	 "canPurchase": false
+	 }
+]

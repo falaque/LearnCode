@@ -24,51 +24,8 @@
     <div ng-repeat='product in store.products' class = ''>
 	<div class = 'panel panel-success'>
 	<div class = 'panel-body' >
-      
 	  <h3 product-name></h3>
-	  <section ng-controller='PanelController as panel1'>
-	   <ul class = 'nav nav-pills'>
-	      <li ng-class='{active:panel1.isSelected(1)}'> <a href ng-click='panel1.selectTab(1)'>Description</a> </li>
-		  <li ng-class='{active:panel1.isSelected(2)}'><a href ng-click='panel1.selectTab(2)'>Specifications</a></li>
-		  <li ng-class='{active:panel1.isSelected(3)}'><a href ng-click='panel1.selectTab(3)'>Reviews</a></li>
-		  
-	   </ul>
-	   <div class = 'panel' ng-show='panel1.isSelected(1)'>
-		  <h4>Description</h4>
-		  <p>{{product.description}}</p>
-	   </div>
-	   <div class = 'panel' ng-show='panel1.isSelected(2)'>
-		  <h4>Specifications</h4>
-		  <blockquote>None yet</blockquote>
-	   </div>
-	   <div class = 'panel' ng-show='panel1.isSelected(3)'>
-		  <h4>Reviews</h4>
-		  <blockquote ng-repeat='review in product.reviews'>
-		   <b>Starts: {{review.stars}}</b>
-		   <p>{{review.body}}</p>
-		   <cite>by: {{review.author}}</cite>
-		  </blockquote>
-		  <form name='reviewForm' ng-controller='ReviewController as ReviewCtrl' ng-submit='reviewForm.$valid && ReviewCtrl.addReview(product)' novalidate>
-			  <blockquote ng-show='ReviewCtrl.review'>
-			   <b>Starts: {{ReviewCtrl.review.stars}}</b>
-			   <p>{{ReviewCtrl.review.body}}</p>
-			   <cite>by: {{ReviewCtrl.review.author}}</cite>
-			  </blockquote>
-		    <select ng-model='ReviewCtrl.review.stars' required>
-				<option value="1">1 Start</option>
-				<option value="2">2 Start</option>
-				<option value="3">3 Start</option>
-				<option value="4">4 Start</option>
-				<option value="5">5 Start</option>
-			</select>
-			<textarea ng-model='ReviewCtrl.review.body' required></textarea>
-			<label>by:</label>
-			<input ng-model='ReviewCtrl.review.author' type='email' required />
-			<div>Review form is {{reviewForm.$valid}}</div>
-			<input type='submit' value='Submit' />
-		  </form>
-	   </div>
-	  </section>
+	  <product-panels></product-panels>
 	  <button class='btn btn-primary btn-sm' ng-show='product.canPurchase'>Add to Cart</button>
 	</div>
 	</div>
@@ -81,8 +38,9 @@
    <script type="text/javascript" src="lib/jquery-3.2.1.js"> </script>
    <script type="text/javascript" src="lib/bootstrap.min.js"> </script>
    
-   <script type="text/javascript" src="lib/angular.min.js"></script>
+   <script type="text/javascript" src="lib/angular.js"></script>
    <script type="text/javascript" src="firstApp/app.js"></script>
+   <script type="text/javascript" src="firstApp/product-directive.js"></script>
    
  </body>
 </html>
