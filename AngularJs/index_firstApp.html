@@ -24,7 +24,7 @@
     <div ng-repeat='product in store.products' class = ''>
 	<div class = 'panel panel-success'>
 	<div class = 'panel-body' >
-	  <h3 product-name></h3>
+	  <h3><product-name product='product'></product-name></h3>
 	  <product-panels></product-panels>
 	  <button class='btn btn-primary btn-sm' ng-show='product.canPurchase'>Add to Cart</button>
 	</div>
@@ -34,6 +34,11 @@
    </div>
    </div>
    
+   
+   <div ng-controller='WeatherController as wc' class='jumbotron' >
+		<div><strong>{{ title }}</strong> </div>
+		{{Weather.data.city_name}}
+   </div>
    
    <script type="text/javascript" src="lib/jquery-3.2.1.js"> </script>
    <script type="text/javascript" src="lib/bootstrap.min.js"> </script>

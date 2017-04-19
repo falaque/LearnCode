@@ -2,8 +2,11 @@
 	var app = angular.module('product-directive',[]);
 	app.directive('productName', function(){
 		return {
-			restrict:'A',
-			templateUrl:'firstApp/product_name.html'
+			restrict:'E',
+			templateUrl:'firstApp/product_name.html',
+			scope:{
+				product:'='
+			}
 		};
 	});
 	

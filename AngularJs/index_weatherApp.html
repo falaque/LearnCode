@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap.css" />
+    <style>
+     .weather_img{
+        width:100px;
+        height:auto;
+     }
+     .card{
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        border-radius: 5px; 
+        width: 150px;
+        text-align:center;
+        padding:5px;
+        margin:25px;
+        display:inline-block;
+     }
+    </style>
+ </head>
+ <body ng-app='weather'>
+    <div class='alert alert-info'><strong>Weather Report</strong></div>
+    <div ng-controller="WeatherController as ctl" class="container">
+      {{WReport.city_name}}
+      <div class = 'panel'>
+       <div ng-repeat="day in WReport.days" class='card' >
+        <forecast-card finfo='day'></forecast-card> 
+       </div>
+       
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="lib/jquery-3.2.1.js"  ></script>
+    <script type="text/javascript" src="lib/bootstrap.min.js" ></script>
+    <script type="text/javascript" src="lib/angular.js"></script>
+    <script type="text/javascript" src="ExampleWeatherApp/template/forecastCard.js"></script>
+    <script type="text/javascript" src="ExampleWeatherApp/app.js"></script>
+ </body>
+</html>
