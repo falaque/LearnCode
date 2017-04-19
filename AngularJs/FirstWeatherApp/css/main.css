@@ -1,0 +1,28 @@
+.my_card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px; 
+  
+  //text-align:center;
+  //padding:5px;
+  margin:15px;
+  display:inline-block;
+  float:left;
+}
+
+.small_card{
+  width: 150px;
+}
+
+.my_card>.my_card_heading{
+  background-color:#fed4f9;
+  border-color: red;
+  border-width: 1px;
+  color:#7a046d;
+  padding:5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.my_card_body{
+  padding:7px;
+}

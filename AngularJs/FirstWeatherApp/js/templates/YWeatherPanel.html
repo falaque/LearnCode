@@ -3,6 +3,46 @@
   <h4 class="panel-title">{{winfo.query.results.channel.title}}</h4>
  </div>
  <div class="panel-body">
-  Hummidity: {{winfo.query.results.channel.atmosphere.humidity }} %
+ 
+ <div class="my_card" title="{{ winfo.query.results.channel.item.title}}">
+    <div class="my_card_heading"><strong>{{ winfo.query.results.channel.item.title}}</strong> 
+    <span class='right small'>({{winfo.query.results.channel.item.condition.temp}} F, {{winfo.query.results.channel.item.condition.text}})</span>
+    
+    </div>
+    <div class="my_card_body">
+   
+      <div ng-repeat="f in winfo.query.results.channel.item.forecast" class="my_card my_card_body">
+        <p class="small">{{f.date}}</p>
+        <p>{{f.low}} F - {{f.high}} F</p>
+        <p>{{f.text}}</p>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="my_card">
+    <div class="my_card_heading">Atmosphere</div>
+    <div class="my_card_body">
+      <p>Hummidity: {{winfo.query.results.channel.atmosphere.humidity }}%</p>
+      <p>Pressure: {{winfo.query.results.channel.atmosphere.pressure }}</p>
+      <p>Visibility: {{winfo.query.results.channel.atmosphere.visibility }}</p>
+    </div>
+  </div>
+  
+  <div class="my_card">
+    <div class="my_card_heading">Astronomy</div>
+    <div class="my_card_body">
+      <p>Sunrise: {{winfo.query.results.channel.astronomy.sunrise }}</p>
+      <p>Sunset: {{winfo.query.results.channel.astronomy.sunset }}</p>
+    </div>
+  </div>
+  
+  <div class="my_card" title="{{ winfo.query.results.channel.item.title}}">
+    <div class="my_card_heading">Weather Condition</div>
+    <div class="my_card_body">
+    {{winfo.query.results.channel.item.condition.temp}} F, {{winfo.query.results.channel.item.condition.text}}
+      
+    </div>
+  </div>
+  
  </div>
 </div>
