@@ -6,7 +6,7 @@
  
  <div class="my_card" title="{{ winfo.query.results.channel.item.title}}">
     <div class="my_card_heading"><strong>{{ winfo.query.results.channel.item.title}}</strong> 
-    <span class='right small'>({{winfo.query.results.channel.item.condition.temp}} F, {{winfo.query.results.channel.item.condition.text}})</span>
+    <span class='pull-right small'>({{winfo.query.results.channel.item.condition.temp}} F, {{winfo.query.results.channel.item.condition.text}})</span>
     
     </div>
     <div class="my_card_body">
@@ -44,5 +44,7 @@
     </div>
   </div>
   
+ 
  </div>
+  <p>Powered by: <img ng-src="{{winfo.query.results.channel.image.url}}"> </img> </p>
 </div>
